@@ -2,9 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum GameState
+{
+    MENU,
+    PLAYING,
+    GAMEOVER,
+    PAUSE
+}
+
+
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
+    public GameState gameState;
 
 	// Use this for initialization
 	void Awake ()
@@ -21,9 +31,16 @@ public class GameManager : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Start()
+    {
+        //gameState = GameState.MENU;
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
+        
+
 	}
 }
