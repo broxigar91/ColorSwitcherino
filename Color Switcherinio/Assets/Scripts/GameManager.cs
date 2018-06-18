@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
     public GameState gameState;
+    public int score;
 
 	// Use this for initialization
 	void Awake ()
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour {
     private void Start()
     {
         //gameState = GameState.MENU;
+        score = 0;
     }
 
     // Update is called once per frame
