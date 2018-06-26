@@ -25,8 +25,18 @@ public class StripeMini : MonoBehaviour {
             Stripe stripe = gameObject.GetComponentInParent<Stripe>();
 
             stripe.miniStripes.RemoveFirst();
-            transform.position = stripe.miniStripes.Last.Value.position + new Vector3(1.6f, 0, 0);
+
+            if (stripe.speed < 0)
+            {
+                transform.position = stripe.miniStripes.Last.Value.position + new Vector3(1.6f, 0, 0);
+            }
+            else
+            {
+                transform.position = stripe.miniStripes.Last.Value.position - new Vector3(1.6f, 0, 0);   
+            }
+
             stripe.miniStripes.AddLast(transform);
+
         }
 
         

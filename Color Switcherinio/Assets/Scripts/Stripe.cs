@@ -13,11 +13,20 @@ public class Stripe : MonoBehaviour {
 
         miniStripes = new LinkedList<Transform>();
 
-        for(int i=0; i< transform.childCount;i++)
+        if(speed <0)
         {
-            miniStripes.AddLast(transform.GetChild(i));
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                miniStripes.AddLast(transform.GetChild(i));
+            }
         }
-
+        else
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                miniStripes.AddFirst(transform.GetChild(i));
+            }
+        }      
 	}
 
 }
