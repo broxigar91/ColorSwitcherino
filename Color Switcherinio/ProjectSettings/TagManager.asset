@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Obstacle
   - Destroyer
+  - Spawner
+  - star
+  - pink
+  - purple
+  - cyan
+  - yellow
   layers:
   - Default
   - TransparentFX
