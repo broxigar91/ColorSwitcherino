@@ -22,6 +22,10 @@ public class Spawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+        if(currentObstacles.Count < 4)
+        {
+            Spawn();
+        }
 	}
 
     void Spawn()
